@@ -1,0 +1,13 @@
+:root {
+  --fontFamilyPrimary: 'Roboto', sans-serif;
+  --fontFamilySecondary: 'Rubik', sans-serif;
+
+  --backgroundColorDark: #1B1D29;
+  --backgroundColorLight: #fff;
+  --backgroundColorLightGray: #E5E5E5; 
+
+  --textColorGray: #7D7D7D;
+  --textColorDark: #262626;
+  --textColorBlack: #000;
+  --textColorLight: #fff;
+}

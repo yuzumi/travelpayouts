@@ -1,0 +1,50 @@
+/* Display */
+.u-displayFlex {
+  display: flex;
+}
+
+.u-displayInlineFlex {
+  display: inline-flex;
+}
+
+.u-flexRow {
+  flex-direction: row;
+}
+
+.u-flexColumn {
+  flex-direction: column;
+}
+
+.u-alignCenter {
+  align-items: center;
+}
+
+.u-justifyBetween {
+  justify-content: space-between;
+}
+
+.u-justifyCenter {
+  justify-content: center;
+}
+
+.u-displayGrid {
+  display: grid;
+}
+
+/* Border Radius */
+.u-rounded {
+  border-radius: 0.25rem;
+}
+
+.u-roundedFull {
+  border-radius: 50%;
+}
+
+/* Width | Height */
+.u-widthFull {
+  width: 100%;
+}
+
+.u-heightFull {
+  height: 100%;
+}
