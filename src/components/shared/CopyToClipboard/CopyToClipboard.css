@@ -1,0 +1,62 @@
+.CopyToClipboard {
+  height: 3rem;
+  border: 2px solid #CFD2D9;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.CopyToClipboard-field {
+  border: none;
+  background-color: transparent;
+}
+
+.CopyToClipboard-tooltip {
+  position: relative;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.CopyToClipboard-tooltipText {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.75rem;
+  visibility: hidden;
+  width: 9rem;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  position: absolute;
+  z-index: 1024;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity 0.3s ease;
+}
+
+.CopyToClipboard-tooltipText::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.CopyToClipboard-tooltip:hover .CopyToClipboard-tooltipText {
+  visibility: visible;
+  opacity: 1;
+}
+
+.CopyToClipboard-icon {
+  cursor: pointer;
+}

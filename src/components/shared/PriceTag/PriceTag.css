@@ -1,0 +1,19 @@
+.PriceTag {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.PriceTag + .PriceTag {
+  margin-left: 1.5rem;
+}
+
+.PriceTag-name {
+  font-size: 0.75rem;
+  color: #7D7D7D;
+}
+
+.PriceTag-cost {
+  font-family: var(--fontFamilySecondary);
+  font-size: 1.125rem;
+  color: #262626;
+}
