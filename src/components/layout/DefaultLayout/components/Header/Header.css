@@ -1,0 +1,8 @@
+.Header {
+  padding: 0 2rem;
+  background-color: var(--Header-backgroundColor);
+
+  grid-area: Header;
+  display: flex;
+  align-items: center;
+}
