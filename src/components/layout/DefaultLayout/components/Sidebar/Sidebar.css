@@ -1,0 +1,8 @@
+.Sidebar {
+  background-color: var(--Sidebar-backgroundColor);
+
+  grid-area: Sidebar;
+  display: grid;
+  grid-row-gap: 1.5rem;
+  grid-template-rows: 5rem 1fr;
+}

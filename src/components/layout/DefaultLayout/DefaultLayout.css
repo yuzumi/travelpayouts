@@ -1,0 +1,19 @@
+.Layout {
+  --Layout-sidebar-width: 3rem;
+  
+  height: 100%;
+
+  display: grid;
+  grid-template-rows: 5rem 1fr 3.25rem;
+  grid-template-columns: var(--Layout-sidebar-width) 1fr; 
+  grid-template-areas: 
+    "Sidebar Header"
+    "Sidebar Main"
+    "Sidebar Footer"
+}
+
+@media (min-width: 452px) {
+  .Layout {
+    --Layout-sidebar-width: 5rem;
+  }
+}
