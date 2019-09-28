@@ -1,0 +1,5 @@
+.Main {
+  grid-area: Main;
+
+  background-color: var(--Main-backgroundColor);
+}
