@@ -2,12 +2,8 @@
   --fontFamilyPrimary: 'Roboto', sans-serif;
   --fontFamilySecondary: 'Rubik', sans-serif;
 
-  --backgroundColorDark: #1B1D29;
-  --backgroundColorLight: #fff;
-  --backgroundColorLightGray: #E5E5E5; 
-
-  --textColorGray: #7D7D7D;
-  --textColorDark: #262626;
-  --textColorBlack: #000;
-  --textColorLight: #fff;
+  --Header-backgroundColor: #fff;
+  --Main-backgroundColor: #F5F7FA;
+  --Sidebar-backgroundColor: #1B1D29;
+  --Footer-backgroundColor: #F5F7FA;
 }
