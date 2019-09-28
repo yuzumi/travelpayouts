@@ -1,0 +1,32 @@
+.Button {
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  padding: 0.25rem 1rem;
+
+  color: var(--Button-textColor);
+  background-color: var(--Button-backgroundColor);
+  border: 2px solid var(--Button-borderColor);
+}
+
+.Button--primary {
+  --Button-textColor: #fff;
+  --Button-borderColor: #0085FF;
+  --Button-backgroundColor: #0085FF;
+}
+
+.Button--secondary {
+  --Button-textColor: #262626;
+  --Button-borderColor: #CFD2D9;
+  --Button-backgroundColor: #F5F7FA;
+}
+
+.Button--large {
+  height: 3rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.125rem;
+}
+
+.Button--block {
+  width: 100%;
+}
