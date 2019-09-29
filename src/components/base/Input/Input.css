@@ -1,0 +1,22 @@
+.Input {
+  width: 100%;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  transition: border-color 0.25s ease;
+}
+
+.Input:focus {
+  border-color: #2F80ED;
+}
+
+.Input--primary {
+  color: #262626;
+  background: #FFFFFF;
+  border: 2px solid #CFD2D9;
+}
+
+.Input--large {
+  height: 3rem;
+  max-width: 300px;
+}

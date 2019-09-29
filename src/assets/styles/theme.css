@@ -1,0 +1,9 @@
+:root {
+  --fontFamilyPrimary: 'Roboto', sans-serif;
+  --fontFamilySecondary: 'Rubik', sans-serif;
+
+  --Header-backgroundColor: #fff;
+  --Main-backgroundColor: #F5F7FA;
+  --Sidebar-backgroundColor: #1B1D29;
+  --Footer-backgroundColor: #F5F7FA;
+}

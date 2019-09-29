@@ -1,0 +1,11 @@
+.Services {
+  padding: 2.5rem 2rem 4rem 2rem;
+  background-color: #F5F7FA;
+}
+
+.Services-title {
+  font-family: var(--fontFamilySecondary);
+  font-weight: 300;
+  font-size: 2.375rem;
+  color: #262626;
+}
