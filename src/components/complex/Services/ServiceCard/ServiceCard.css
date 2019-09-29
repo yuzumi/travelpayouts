@@ -1,0 +1,48 @@
+.ServiceCard {
+
+  padding: 1.625rem 2rem;
+  background-color: #fff;
+}
+
+.ServiceCard-name {
+  font-weight: 300;
+  font-size: 1.75rem;
+  color: #000000;
+  padding-bottom: 0.5rem;
+}
+
+.ServiceCard-description {
+  font-size: 0.875rem;
+  color: #7D7D7D;
+}
+
+.ServiceCard-actions {
+  display: grid;
+  align-items: flex-end;
+  padding-top: 1.5rem;
+}
+
+@media (max-width: 575px) {
+  .ServiceCard-actions {
+    grid-gap: 0.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .ServiceCard-actions {
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 982px) {
+  .ServiceCard {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .ServiceCard-actions {
+    padding-left: 1.5rem;
+  }
+}
