@@ -1,0 +1,42 @@
+.Filter {
+  padding: 1rem 0 1.5rem 0;
+}
+
+.Filter-title {
+  font-size: 0.75rem;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  color: #7D7D7D;
+  font-weight: normal;
+  padding-bottom: 0.5rem;
+}
+
+.Filter-group {
+  padding-bottom: 1rem;
+}
+
+.Filter-group > * + * {
+  margin-top: 0.5rem;
+}
+
+.Filter-group--inline {
+  flex-direction: row;
+}
+
+.Filter-group--inline > * + * {
+  margin: 0;
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 486px) {
+  .Filter-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .Filter-group > * + * {
+    margin: 0;
+    margin-left: 1.5rem;
+  }
+}

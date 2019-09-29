@@ -11,6 +11,8 @@
 }
 
 .CopyToClipboard-field {
+  font-size: 0.875rem;
+  color: #262626;
   border: none;
   background-color: transparent;
 }

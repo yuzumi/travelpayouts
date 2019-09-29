@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Input from 'components/base/Input';
+import React, { useState, useRef } from 'react';
 import Copy from 'static/icons/copy.svg';
 
 import 'components/shared/CopyToClipboard/CopyToClipboard.css';
@@ -9,15 +8,15 @@ const CopyToClipboard = ({ value }) => {
 
   const [tooltipText, setTooltipText] = useState(defaultTooltipText);
 
-  const copyToClipboard = () => {
-    const field = document.getElementById('CopyToClipboard-field');
+  const fieldRef = useRef(null);
 
-    field.select();
-    field.setSelectionRange(0, 99999);
+  const copyToClipboard = () => {
+    fieldRef.current.select();
+    fieldRef.current.setSelectionRange(0, 99999);
 
     document.execCommand('copy');
 
-    const tooltipText = `Copied: ${field.value}`;
+    const tooltipText = `Copied: ${fieldRef.current.value}`;
 
     setTooltipText(tooltipText);
   };
@@ -28,10 +27,11 @@ const CopyToClipboard = ({ value }) => {
 
   return (
     <div className="CopyToClipboard">
-      <Input
-        className="CopyToClipboard-field Input"
+      <input
+        className="CopyToClipboard-field"
         id="CopyToClipboard-field"
         value={value}
+        ref={fieldRef}
         readOnly
       />
       <div className="CopyToClipboard-tooltip">

@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 import 'components/base/Input/Input.css';
 
-const Input = (props) => (
-  <input {...props} />
-);
+const Input = forwardRef((props, ref) => (
+  <input {...props} ref={ref} />
+));
 
 export default Input;
