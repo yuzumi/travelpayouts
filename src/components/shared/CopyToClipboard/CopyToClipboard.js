@@ -10,15 +10,47 @@ const CopyToClipboard = ({ value }) => {
 
   const fieldRef = useRef(null);
 
-  const copyToClipboard = () => {
-    fieldRef.current.select();
-    fieldRef.current.setSelectionRange(0, 99999);
+  const copy = () => {
+    try {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(value);
+      } else if (window.clipboardData) { // ED
+        window.clipboardData.setData('text', value);
+      } else { // other browsers, iOS, Mac OS
+        copyToClipboard(fieldRef.current);
+      }
+
+      setTooltipText(`Copied: ${value}`);
+    } catch (error) {
+      setTooltipText(`Please copy coupon manually.`);
+    }
+  };
+
+  const copyToClipboard = (element) => {
+    const prevContentEditable = element.contentEditable;
+    const prevReadOnly = element.readOnly;
+
+    try {
+      element.contentEditable = 'true'; // specific to iOS
+      element.readOnly = false;
+
+      copyNodeContentsToClipboard(element);
+    } finally {
+      element.contentEditable = prevContentEditable;
+      element.readOnly = prevReadOnly;
+    }
+  };
+
+  const copyNodeContentsToClipboard = (element) => {
+    const range = document.createRange();
+    const selection = window.getSelection();
+
+    range.selectNodeContents(element);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    element.setSelectionRange(0, 99999);
 
     document.execCommand('copy');
-
-    const tooltipText = `Copied: ${fieldRef.current.value}`;
-
-    setTooltipText(tooltipText);
   };
 
   const resetToDefault = () => {
@@ -42,7 +74,7 @@ const CopyToClipboard = ({ value }) => {
           className="CopyToClipboard-icon"
           src={Copy}
           alt=""
-          onClick={copyToClipboard}
+          onClick={copy}
           onMouseLeave={resetToDefault}
         />
       </div>
